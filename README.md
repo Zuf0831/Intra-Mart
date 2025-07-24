@@ -329,6 +329,113 @@ set TMP=C:\TempPG
 ## Juggling
 ⭐⭐⭐⭐⭐⭐
 
+> **Download Juggling from the link below** 
+
+> **Jugglingをダウンロードするため、以下のリンクをご覧ください** 
+
+##### リンク : [Juggling Download](https://download.intra-mart.jp/library/).
+
+<p align="left">
+  <img src="media/Resin/Link.png" alt="images" width="500"/>
+</p>
+
+> **Input License Key** 
+
+> **ライセンスキーを入力** 
+
+<p align="left">
+  <img src="media/Resin/License.png" alt="images" width="800"/>
+</p>
+
+> **Search Juggling using (CTRL + F) feature** 
+
+> **キーボードで(CTRL + F)を押し、Jugglingを入力** 
+
+<p align="left">
+  <img src="media/Juggling/filter.png" alt="images" width="500"/>
+</p>
+
+
+
+#### Juggling Setup
+
+<p align="left">
+  <img src="media/Juggling/setup1.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup2.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup3.png" alt="images" width="500"/>
+</p>
+<p align="left">
+  <img src="media/Juggling/setup4.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup5.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup6.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup7.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup8.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup9.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup10.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup11.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup12.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup13.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup14.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup15.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup152.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup16.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup17.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/setup18.png" alt="images" width="500"/>
+</p>
+
+
+
 
 
 
