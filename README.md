@@ -394,6 +394,10 @@ set TMP=C:\TempPG
   <img src="media/Juggling/setup9.png" alt="images" width="500"/>
 </p>
 
+> **Uncomment base URL and create your own URL name (For now we only run it on localhost)** 
+
+> **エンドポイント名を自由に作成し、ベースURLからコメント解除されていない部分を削除（現在はlocalhostでのみ実行する）** 
+
 <p align="left">
   <img src="media/Juggling/setup10.png" alt="images" width="500"/>
 </p>
@@ -402,12 +406,16 @@ set TMP=C:\TempPG
   <img src="media/Juggling/setup11.png" alt="images" width="500"/>
 </p>
 
+> **Ensure created database in PostgreSQL are same** 
+
+> **前回の作成したデータベース名、確認が必要** 
+
 <p align="left">
   <img src="media/Juggling/setup12.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/Juggling/setup13.png" alt="images" width="500"/>
+  <img src="media/Juggling/setup13.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
@@ -418,13 +426,23 @@ set TMP=C:\TempPG
   <img src="media/Juggling/setup15.png" alt="images" width="500"/>
 </p>
 
+
+> **Make sure the file name in this section matches the URL name you previously created.** 
+
+> **以前に作成したURL名と一致するように、このセクションのファイル名を確認してください。** 
+
+
 <p align="left">
-  <img src="media/Juggling/setup152.png" alt="images" width="500"/>
+  <img src="media/Juggling/setup152.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
   <img src="media/Juggling/setup16.png" alt="images" width="500"/>
 </p>
+
+> **For the country and language you can choose what you want** 
+
+> **国、言語について自由に選択出来る** 
 
 <p align="left">
   <img src="media/Juggling/setup17.png" alt="images" width="500"/>
@@ -436,14 +454,194 @@ set TMP=C:\TempPG
 
 
 
+⭐⭐⭐⭐⭐⭐
+### Execute Warfile
+⭐⭐⭐⭐⭐⭐
+
+> **We need to create a new resin folder because (1 Project 1 Resin Folder) and move all data from resin-main folder to new resin folder** 
+
+> **新しい resin フォルダを作成し（1プロジェクト＝1 Resinフォルダのルールに従い）、resin-main フォルダ内の全データを新しい resin フォルダに移動してください** 
 
 
+<p align="left">
+  <img src="media/Warfile/setup1.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/Warfile/setup2.png" alt="images" width="500"/>
+</p>
+
+> **Run Resin.exe as Admin** 
+
+> **Resin.exe ファイルは管理者として実行** 
+
+<p align="left">
+  <img src="media/Warfile/setup3.png" alt="images" width="700"/>
+</p>
+
+<p align="left">
+  <img src="media/Warfile/setup4.png" alt="images" width="500"/>
+</p>
+
+> **In Command Prompt you need to copy path your resin folder（Need to add 'cd' command）** 
+
+> **コマンドプロンプトの中にResinフォルダのパースをコピペ（ｃｄコマンド忘れないように）** 
+
+<p align="left">
+  <img src="media/Warfile/setup5.png" alt="images" width="800"/>
+</p>
+
+> **Add 'resin deploy' + (your warfile path) / (file.war)** 
+
+> **'resin deploy (warfileフォルダパース) / (WARファイル)'を入力してください。** 
+
+<p align="left">
+  <img src="media/Warfile/setup6.png" alt="images" width="1000"/>
+</p>
+
+<p align="left">
+  <img src="media/Warfile/setup62.png" alt="images" width="1000"/>
+</p>
+
+> **If you got Bean Error, you need to follow guide below** 
+ if not just go to [Checkpoint Deploy](#checkpoint-deploy)
+
+> **Beanエラーが発生したら、以下のガイドをご覧ください。**
+なかったらCheckpoint Deployに移動 [Checkpoint Deploy](#checkpoint-deploy)
+
+<p align="left">
+  <img src="media/Warfile/ErrorBean.png" alt="images" width="1000"/>
+</p>
+
+> **Find (applicationContext-im_tgfw_common.xml) file inside deployed warfile** 
+
+> **デプロイされたWarfileフォルダの中に(applicationContext-im_tgfw_common.xml)ファイルを探さないといけない。** 
+
+<p align="left">
+  <img src="media/Warfile/ErrorBean22.png" alt="images" width="1000"/>
+</p>
+
+<p align="left">
+  <img src="media/Warfile/ErrorBean2.png" alt="images" width="1000"/>
+</p>
+
+> **Change Dozzer Setting with code below** 
+
+> **Dozzer設定された部分に対して変更が必要** 
+
+> **Before Edit, 編集前** 
+```sh
+<bean class="org.dozer.spring.DozerBeanMapperFactoryBean">
+  <property name="mappingFiles" value="classpath*:/META-INF/dozer/**/*-mapping.xml" />
+</bean>
+```
+
+> **After Edit, 編集後** 
+```sh
+<bean class="com.github.dozermapper.spring.DozerBeanMapperFactoryBean">
+  <property name="mappingFiles" value="classpath*:/META-INF/dozer/**/*-mapping.xml" />
+</bean>
+```
+
+<p align="left">
+  <img src="media/Warfile/ErrorBean3.png" alt="images" width="1000"/>
+</p>
+
+
+> **RESTART Resin.exe (Stop ⇒ Start)** 
+
+> **Resin.exe再起動が必要  (Stop ⇒ Start)** 
+
+<p align="left">
+  <img src="media/Warfile/ErrorBean223.png" alt="images" width="400"/>
+</p>
+
+🚩🚩🚩
+#### Checkpoint Deploy
+🚩🚩🚩
+
+<p align="left">
+  <img src="media/Warfile/setup7.png" alt="images" width="1000"/>
+</p>
+
+<p align="left">
+  <img src="media/Warfile/setup8.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/Warfile/setup9.png" alt="images" width="800"/>
+</p>
 
 
 
 ⭐⭐⭐⭐⭐⭐
 ## EBuilder
 ⭐⭐⭐⭐⭐⭐
+
+> **Download EBuilder from the link below** 
+
+> **EBuilderをダウンロードするため、以下のリンクをご覧ください** 
+
+##### リンク : [EBuilder Download](https://download.intra-mart.jp/library/).
+
+<p align="left">
+  <img src="media/Resin/Link.png" alt="images" width="500"/>
+</p>
+
+> **Input License Key** 
+
+> **ライセンスキーを入力** 
+
+<p align="left">
+  <img src="media/Resin/License.png" alt="images" width="800"/>
+</p>
+
+> **Search ebuilder using (CTRL + F) feature** 
+
+> **キーボードで(CTRL + F)を押し、ebuilderを入力** 
+
+<p align="left">
+  <img src="media/EBuilder/setup1.png" alt="images" width="800"/>
+</p>
+
+
+> **Extract EBuilder, Make sure to put it to C Drive, and then modify ebuilder.ini file** 
+
+> **EBuilderを抽出し、Cドライブへ配置し、ebuilder.iniファイル編集が必要** 
+
+<p align="left">
+  <img src="media/EBuilder/setup2.png" alt="images" width="800"/>
+</p>
+
+
+🚩🚩🚩🚩🚩🚩
+#### Create Ebuilder Project
+🚩🚩🚩🚩🚩🚩
+
+<p align="left">
+  <img src="media/EBuilder/setup3.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup4.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup5.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup6.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup7.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup8.png" alt="images" width="800"/>
+</p>
+
 
 
 
