@@ -5,41 +5,82 @@
 </p>
 
 ### EN Version
-NTT DATA Intramart's digital process automation platform integrates various corporate business systems onto a unified platform, 
-enabling IT investment efficiency and the optimization/standardization of business processes.
+
+<p align="left">
+NTT DATA Intramart's digital process automation platform integrates various corporate business systems onto a unified platform, <br> enabling IT investment efficiency and the optimization/standardization of business processes.
+</p>
+
 
 
 ### JP Version
-株式会社NTTデータ イントラマートが提供する、企業内の様々な業務システムを同一のプラットフォーム上に集約し、
+<p align="left">
+株式会社NTTデータ イントラマートが提供する、企業内の様々な業務システムを同一のプラットフォーム上に集約し、<br>
 IT投資の効率化と業務プロセスの最適化・標準化を実現するためのデジタルプロセスオートメーションプラットフォーム。
+</p>
 
-<h1 align="center">✨ Disclaimer ✨</h1>
+
+
+<h1 align="center">✨ Disclaimer (免責事項)✨</h1>
 
 - For more details about Intra-Mart, please refer to the official Intra-Mart website.
 - この情報はIntra-Martに関する作成されたので、不明点があったら、Intra-Martの正式サイトをご覧ください。
 ##### リンク : `https://www.intra-mart.jp/`.
 
 
-<h1 align="center">📖 Requirements 📖</h1>
+<h1 align="center">📖 Requirements (要件項目)📖</h1>
 
-- [Java 8](#java-8)
-- [Resin](#resin)
-- [PostgreSQL 16.9 (17以下) - Compatible Version](#postgresql)
-- [Juggling](#juggling)
-- [EBuilder](#ebuilder)
-- [Notepad++ ・ VSCode](#notepad-vscode)
-- [STMP 4 Dev](#stmp-4-dev)
+- Java 8
+- Notepad++ ・ VSCode
+- Resin
+- PostgreSQL 16.9 (17以下) - Compatible Version
+- Juggling
+- EBuilder
+- SMTP 4 Dev
+
+(Optional)
+- NET Framework3.5.(Windows 8 / Windows8.1)
+
+<h1 align="center">📖 Documentation (ドキュメント)📖</h1>
+
+Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
+
+1. [Program Install](#install-section)
+2. [Tenant Setup](Tenant_Setup/tenant.md)
+
+<h1 align="center">⏭️ Details (目次) ⏭️</h1>
+
+1. [Java Install](#java-8)
+2. [Notepad++ ・ VSCode Download](#notepad-vscode)
+3. [Resin Install](#resin)
+    - [JDBC Download](#jdbc-download)
+4. [PostgreSQL Install](#postgresql)
+    - [Fix getlocal.ps1 Error](#handle-ps1-error)
+    - [PostgreSQL Setup](#postgresql-setup)
+    - [Create Database](#create-database)
+5. [Juggling](#juggling)
+    - [Execute Warfile](#execute-warfile)
+    - [Fix Bean Error](#bean-error)
+    - [Checkpoint Deploy](#checkpoint-deploy)
+5. [EBuilder Install](#ebuilder)
+    - [Create Ebuilder Project](#create-ebuilder-project)
+    - [Create Server Ebuilder](#create-server-ebuilder)
+6. [SMTP 4 Dev Download](#smtp-4-dev)
 
 
 <h1 align="center">💻 Installation 💻</h1>
+
+###### Install Section
 
 ⭐⭐⭐⭐⭐⭐
 ## Java 8
 ⭐⭐⭐⭐⭐⭐
 
-> **Note:** If you want a free version, you can download OpenJDK from [Link Here](https://www.openlogic.com/openjdk-downloads)
+> **Note:** If you want a free version, you can download from OpenJDK.
 
-> **ノート:** 無料版をご利用になりたい場合は、OpenJDKをダウンロードいただけます [ここにクリック](https://www.openlogic.com/openjdk-downloads)
+> **ノート:** 無料版をご利用になりたい場合は、OpenJDKをダウンロードいただけます。
+
+##### リンク : [OpenJDK Download](https://www.openlogic.com/openjdk-downloads).
+
 
 <p align="left">
   <img src="media/Java/Filter.png" alt="images" width="500"/>
@@ -54,7 +95,7 @@ IT投資の効率化と業務プロセスの最適化・標準化を実現する
 
 > **Note:** If Show nothing Need to check the **Environment variables**
 
-> **ノート:** Javaバージョン確認の結果が見つからなかったら、**環境変数** 確認が必要
+> **ノート:** Javaバージョン確認の結果が見つからなかったら、**環境変数** 確認が必要。
 
 <p align="left">
   <img src="media/Java/path.png" alt="images" width="800"/>
@@ -64,6 +105,34 @@ IT投資の効率化と業務プロセスの最適化・標準化を実現する
   <img src="media/Java/Environment.png" alt="images" width="800"/>
 </p>
 
+⭐⭐⭐⭐⭐⭐
+## Notepad VsCode
+⭐⭐⭐⭐⭐⭐
+
+> **Download Notepad++ from the link below** 
+
+> **Notepad++をダウンロードするため、以下のリンクをご覧ください** 
+
+##### リンク : [Notepad++ Download](https://notepad-plus-plus.org/).
+
+
+<p align="left">
+  <img src="media/Editor/notepad.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/Editor/notepad2.png" alt="images" width="500"/>
+</p>
+
+> **Download VSCode from the link below** 
+
+> **VSCodeをダウンロードするため、以下のリンクをご覧ください** 
+
+##### リンク : [VSCode Download](https://code.visualstudio.com/).
+
+<p align="left">
+  <img src="media/Editor/vscode.png" alt="images" width="500"/>
+</p>
 
 ⭐⭐⭐⭐⭐⭐
 ## Resin
@@ -120,6 +189,8 @@ IT投資の効率化と業務プロセスの最適化・標準化を実現する
 > **To Connect PostgreSQL Database to Resin (Intra-Mart), Need to download JDBC** 
 
 > **PostgreSQL接続にはJDBCドライバが必要です** 
+
+#### JDBC Download
 
 ##### リンク : [JDBC Download](https://jdbc.postgresql.org/download/).
 
@@ -186,6 +257,9 @@ IT投資の効率化と業務プロセスの最適化・標準化を実現する
 
 > **PS1 エラーが発生したら、次のガイドをご覧ください、** 
 なかったらPostgreSQL Setupに移動　[PostgreSQL Setup](#postgresql-setup)
+
+### Handle PS1 Error
+
 <p align="left">
   <img src="media/PostgreSQL/Errorps1.png" alt="images" width="700"/>
 </p>
@@ -227,19 +301,19 @@ set TMP=C:\TempPG
 #### PostgreSQL Setup
 
 <p align="left">
-  <img src="media/PostgreSQL/setup1.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/setup1.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/setup2.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/setup2.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/setup3.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/setup3.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/setup4.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/setup4.png" alt="images" width="500"/>
 </p>
 
 > **You can choose a password that you want, for example, (123).** 
@@ -247,11 +321,11 @@ set TMP=C:\TempPG
 > **パスワードは自由に入力、例として今回は（123）を入力** 
 
 <p align="left">
-  <img src="media/PostgreSQL/setup5.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/setup5.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/setup6.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/setup6.png" alt="images" width="500"/>
 </p>
 
 > **For the Locale, you can setup general locale (English, United States)** 
@@ -259,7 +333,7 @@ set TMP=C:\TempPG
 > **エラーを避けるため、ローカル設定は (English, United States)を入力した方が良い** 
 
 <p align="left">
-  <img src="media/PostgreSQL/setup7.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/setup7.png" alt="images" width="500"/>
 </p>
 
 > **For the last part, if the pop up appears you can ignore it and press cancel** 
@@ -267,7 +341,7 @@ set TMP=C:\TempPG
 > **インストールした後で、以下の画面が表示したら、無視しても良い** 
 
 <p align="left">
-  <img src="media/PostgreSQL/setup8.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/setup8.png" alt="images" width="500"/>
 </p>
 
 
@@ -296,19 +370,31 @@ set TMP=C:\TempPG
 > **Intra-Mart開発のため、imartロールが必要** 
 
 <p align="left">
-  <img src="media/PostgreSQL/CreateRole.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/CreateRole.png" alt="images" width="500"/>
+</p>
+
+> **General > Name** 
+
+```sh
+ imart
+```
+
+<p align="left">
+  <img src="media/PostgreSQL/role1.png" alt="images" width="500"/>
+</p>
+
+> **Definition > Password パスワード** 
+
+```sh
+ imart
+```
+
+<p align="left">
+  <img src="media/PostgreSQL/role2.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/role1.png" alt="images" width="300"/>
-</p>
-
-<p align="left">
-  <img src="media/PostgreSQL/role2.png" alt="images" width="300"/>
-</p>
-
-<p align="left">
-  <img src="media/PostgreSQL/role3.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/role3.png" alt="images" width="500"/>
 </p>
 
 > **Create New Database For Intra-Mart Development** 
@@ -316,11 +402,11 @@ set TMP=C:\TempPG
 > **Intra-Mart開発のため、新しいデータベースが必要** 
 
 <p align="left">
-  <img src="media/PostgreSQL/CreateDB.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/CreateDB.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/databaseCreate.png" alt="images" width="300"/>
+  <img src="media/PostgreSQL/databaseCreate.png" alt="images" width="500"/>
 </p>
 
 
@@ -440,9 +526,9 @@ set TMP=C:\TempPG
   <img src="media/Juggling/setup16.png" alt="images" width="500"/>
 </p>
 
-> **For the country and language you can choose what you want** 
+> **For the language you can choose what you want** 
 
-> **国、言語について自由に選択出来る** 
+> **言語について自由に選択出来る** 
 
 <p align="left">
   <img src="media/Juggling/setup17.png" alt="images" width="500"/>
@@ -508,6 +594,9 @@ set TMP=C:\TempPG
 
 > **Beanエラーが発生したら、以下のガイドをご覧ください。**
 なかったらCheckpoint Deployに移動 [Checkpoint Deploy](#checkpoint-deploy)
+
+
+#### Bean Error
 
 <p align="left">
   <img src="media/Warfile/ErrorBean.png" alt="images" width="1000"/>
@@ -613,38 +702,157 @@ set TMP=C:\TempPG
   <img src="media/EBuilder/setup2.png" alt="images" width="800"/>
 </p>
 
-
-🚩🚩🚩🚩🚩🚩
-#### Create Ebuilder Project
-🚩🚩🚩🚩🚩🚩
-
 <p align="left">
-  <img src="media/EBuilder/setup3.png" alt="images" width="800"/>
+  <img src="media/EBuilder/setup3.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/setup4.png" alt="images" width="800"/>
+  <img src="media/EBuilder/setup4.png" alt="images" width="500"/>
+</p>
+
+> **For the language you can choose what you want** 
+
+> **言語について自由に選択出来る** 
+
+<p align="left">
+  <img src="media/EBuilder/setup5.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/setup5.png" alt="images" width="800"/>
+  <img src="media/EBuilder/setup6.png" alt="images" width="500"/>
 </p>
 
-<p align="left">
-  <img src="media/EBuilder/setup6.png" alt="images" width="800"/>
-</p>
+> **Input URL (URL入力)** 
+
+```sh
+ http://www.intra-mart.jp/eclipse/update/site/eBuilder/8.0.x/
+```
 
 <p align="left">
   <img src="media/EBuilder/setup7.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/setup8.png" alt="images" width="800"/>
+  <img src="media/EBuilder/setup8.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup9.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup10.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup11.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup12.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/setup13.png" alt="images" width="500"/>
+</p>
+
+> **General ⇒　Editor ⇒　Text/Editor (Show Whitespace Charaters)** 
+
+<p align="left">
+  <img src="media/EBuilder/setup14.png" alt="images" width="500"/>
+</p>
+
+> **General ⇒　Show Heap Status** 
+
+<p align="left">
+  <img src="media/EBuilder/setup15.png" alt="images" width="500"/>
+</p>
+
+> **Ebuilder ⇒　Input Ebuilder License** 
+
+<p align="left">
+  <img src="media/EBuilder/setup16.png" alt="images" width="500"/>
+</p>
+
+> **And then Apply(終わったら適用ボータン押しが必要)** 
+
+🚩🚩🚩🚩🚩🚩
+#### Create Ebuilder Project
+🚩🚩🚩🚩🚩🚩
+
+<p align="left">
+  <img src="media/EBuilder/project1.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/project2.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/project3.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/project4.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/project5.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/project6.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/project7.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/project8.png" alt="images" width="500"/>
+</p>
+
+
+🚩🚩🚩🚩🚩🚩
+#### Create Server Ebuilder
+🚩🚩🚩🚩🚩🚩
+
+<p align="left">
+  <img src="media/EBuilder/move1.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/move2.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/move3.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/move4.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/move5.png" alt="images" width="800"/>
 </p>
 
 
 
+⭐⭐⭐⭐⭐⭐
+### SMTP 4 Dev
+⭐⭐⭐⭐⭐⭐
 
-⭐⭐⭐⭐⭐⭐
-### STMP 4 Dev
-⭐⭐⭐⭐⭐⭐
+> **Download SMTP4Dev from the link below** 
+
+> **SMTP4Devをダウンロードするため、以下のリンクをご覧ください** 
+
+##### リンク : [SMTP4Dev Download](https://github.com/rnwood/smtp4dev).
+
+<p align="left">
+  <img src="media/smtp/try1.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/smtp/try2.png" alt="images" width="800"/>
+</p>
