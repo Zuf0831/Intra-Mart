@@ -36,9 +36,11 @@ IT投資の効率化と業務プロセスの最適化・標準化を実現する
 - Juggling
 - EBuilder
 - SMTP 4 Dev
+- SQL Express DB
 
 (Optional)
 - NET Framework3.5.(Windows 8 / Windows8.1)
+
 
 <h1 align="center">📖 Documentation (ドキュメント)📖</h1>
 
@@ -46,6 +48,8 @@ Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
 
 1. [Program Install](#install-section)
 2. [Tenant Setup](Tenant_Setup/tenant.md)
+3. [Workflow Setup](workflow_setup/workflow.md)
+4. [Source Code Setup](scode_setup/scode.md)
 
 <h1 align="center">⏭️ Details (目次) ⏭️</h1>
 
