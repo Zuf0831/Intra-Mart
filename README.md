@@ -305,15 +305,15 @@ set TMP=C:\TempPG
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/setup2.png" alt="images" width="500"/>
+  <img src="media/PostgreSQL/Setup2.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/setup3.png" alt="images" width="500"/>
+  <img src="media/PostgreSQL/Setup3.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/setup4.png" alt="images" width="500"/>
+  <img src="media/PostgreSQL/Setup4.png" alt="images" width="500"/>
 </p>
 
 > **You can choose a password that you want, for example, (123).** 
@@ -321,11 +321,11 @@ set TMP=C:\TempPG
 > **パスワードは自由に入力、例として今回は（123）を入力** 
 
 <p align="left">
-  <img src="media/PostgreSQL/setup5.png" alt="images" width="500"/>
+  <img src="media/PostgreSQL/Setup5.png" alt="images" width="500"/>
 </p>
 
 <p align="left">
-  <img src="media/PostgreSQL/setup6.png" alt="images" width="500"/>
+  <img src="media/PostgreSQL/Setup6.png" alt="images" width="500"/>
 </p>
 
 > **For the Locale, you can setup general locale (English, United States)** 
@@ -333,7 +333,7 @@ set TMP=C:\TempPG
 > **エラーを避けるため、ローカル設定は (English, United States)を入力した方が良い** 
 
 <p align="left">
-  <img src="media/PostgreSQL/setup7.png" alt="images" width="500"/>
+  <img src="media/PostgreSQL/Setup7.png" alt="images" width="500"/>
 </p>
 
 > **For the last part, if the pop up appears you can ignore it and press cancel** 
@@ -341,7 +341,7 @@ set TMP=C:\TempPG
 > **インストールした後で、以下の画面が表示したら、無視しても良い** 
 
 <p align="left">
-  <img src="media/PostgreSQL/setup8.png" alt="images" width="500"/>
+  <img src="media/PostgreSQL/Setup8.png" alt="images" width="500"/>
 </p>
 
 
