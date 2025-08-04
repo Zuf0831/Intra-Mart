@@ -1,7 +1,7 @@
 <h1 align="center">Intra Mart</h1>
 
 ⬅️
-[Back 戻る](../README.md)
+[Back to README 戻る](../README.md)
 
 
 <h2 align="left">⭐Worfkflow Setup⭐</h2>
@@ -23,9 +23,19 @@ Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
 
 ##### User Register
 
+> **Before create User we need to create public group** 
+
+> **ユーザー登録前にパブリックグループの作成が必要** 
+
+> **Tenant Management ⇒　Common Master ⇒　(User / Public Group)**
+
 <p align="left">
   <img src="images/user1.png" alt="images" width="500"/>
 </p>
+
+> **Create New Public Group** 
+
+> **パブリックグループの作成** 
 
 <p align="left">
   <img src="images/user2.png" alt="images" width="500"/>
@@ -39,29 +49,52 @@ Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
   <img src="images/user3.png" alt="images" width="1000"/>
 </p>
 
+> **Create New User** 
+
+> **ユーザーアカウントの登録** 
+
 <p align="left">
   <img src="images/user4.png" alt="images" width="800"/>
 </p>
+
+> **Input username (Usercode) for the account** 
+
+> **ユーザーアカウントのユーザーコードを記入** 
 
 <p align="left">
   <img src="images/user5.png" alt="images" width="800"/>
 </p>
 
+
 <p align="left">
   <img src="images/user6.png" alt="images" width="800"/>
 </p>
+
+> **Input password and dont forget to give check for the License** 
+
+> **パスワードを記入、ライセンスのところにチェックマークを付けてください** 
 
 <p align="left">
   <img src="images/user7.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="images/user8.png" alt="images" width="800"/>
+  <img src="images/route8.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="images/user9.png" alt="images" width="800"/>
+  <img src="images/user8.png" alt="images" width="800"/>
 </p>
+
+> **Public Group** 
+
+<p align="left">
+  <img src="images/user9.png" alt="images" width="1000"/>
+</p>
+
+> **Search public group that created before** 
+
+> **作成されたパブリックグループを検索** 
 
 <p align="left">
   <img src="images/user10.png" alt="images" width="800"/>
@@ -118,6 +151,9 @@ Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
 
 ##### Screen Register
 
+> **For this part, we'll use (path_test) for the URL path, you can adjust it to whatever you want.** 
+
+> **今回、パースは(path_test)を使用してます、自由に記入してください** 
 
 <p align="left">
   <img src="images/applyScreen.png" alt="images" width="500"/>
@@ -202,32 +238,39 @@ Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
   <img src="images/route4.png" alt="images" width="500"/>
 </p>
 
-<p align="left">
-  <img src="images/route5.png" alt="images" width="500"/>
-</p>
+> **For this part, we'll use simple route, You can drag and drop node on the left** 
+
+> **今回、シンプルなルートを作成し、左側のノードをドラッグドロップしてください** 
 
 <p align="left">
-  <img src="images/route6.png" alt="images" width="500"/>
+  <img src="images/route5.png" alt="images" width="800"/>
+</p>
+
+> **We need to assign user for the Apply Node and Approve Node** 
+
+> **申請ノードと承認ノードはユーザー登録が必要** 
+
+<p align="left">
+  <img src="images/route6.png" alt="images" width="1000"/>
 </p>
 
 <p align="left">
   <img src="images/route7.png" alt="images" width="500"/>
 </p>
 
+
 <p align="left">
-  <img src="images/route8.png" alt="images" width="500"/>
+  <img src="images/route9.png" alt="images" width="800"/>
+</p>
+
+> **Approve Node** 
+
+<p align="left">
+  <img src="images/route10.png" alt="images" width="900"/>
 </p>
 
 <p align="left">
-  <img src="images/route9.png" alt="images" width="500"/>
-</p>
-
-<p align="left">
-  <img src="images/route10.png" alt="images" width="500"/>
-</p>
-
-<p align="left">
-  <img src="images/route11.png" alt="images" width="500"/>
+  <img src="images/route11.png" alt="images" width="800"/>
 </p>
 
 
@@ -249,11 +292,25 @@ Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
   <img src="images/flow3.png" alt="images" width="500"/>
 </p>
 
+> **Find Content and Route that you created before** 
+
+> **先ほど、作成されたコンテンツとルートを検索してください** 
+
 <p align="left">
-  <img src="images/flow4.png" alt="images" width="500"/>
+  <img src="images/flow4.png" alt="images" width="1000"/>
 </p>
+
+> **For this part(Sample_Workflow) you can create source code to show screen** 
+
+> **(Sample_Workflow)の画面を表示するため、ソースコードが必要。** 
+
+➡️
+[Source Code Setup ソースコード作成](../scode_setup/scode.md)
 
 <p align="left">
   <img src="images/flow5.png" alt="images" width="1000"/>
 </p>
+
+⬅️
+[Back to README 戻る](../README.md)
 
