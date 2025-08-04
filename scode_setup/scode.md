@@ -10,16 +10,31 @@
 
 Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
 
-ユーザー登録　⇒　コンテンツ定義　⇒　ルート定義　⇒　フロー定義
+パッケージ作成　⇒　画面作成　
 
-1. [User Register](#user-register)
-2. [Content Definition](#content-definition)
-     - [Screen Register](#screen-register)
-     - [User Program](#user-program)
-3. [Route Definition](#route-definition)
-4. [Flow Definition](#flow-definition)
+1. [Create Package](#create-package)
+    - [ActionProcessService.java](#source-code-1)
+    - [MatterEndProcessService.java](#source-code-2)
+    - [Contoller.java](#source-code-3)
+    - [Form.java](#source-code-4)
+    - [WorkflowForm.java](#source-code-5)
+    - [ActionProcess.java](#source-code-6)
+    - [MatterEndProcess.java](#source-code-7)
+
+2. [Views Setup](#create-views)
+    - [Beans.xml](#source-code-8)
+    - [Sample Code Apply.jsp](#source-code-9)
 
 
+- [Compile Error Fixing](#error-compile) 
+
+
+
+> **Open Project in EBuilder Application, then create a package same as picture below** 
+
+> **eBuilderでの作成されたプロジェクトを開き, その後以下の画像の通りにパッケージを作成** 
+
+##### Create Package
 
 <p align="left">
   <img src="images/code1.png" alt="images" width="500"/>
@@ -117,9 +132,6 @@ public interface MatterEndProcessService {
 
 
 
-
-
-
 #### Source Code 3
 
 
@@ -143,7 +155,7 @@ public interface MatterEndProcessService {
 
 
 <p align="left">
-  <img src="images/code10.png" alt="images" width="500"/>
+  <img src="images/code10.png" alt="images" width="800"/>
 </p>
 
 > **Controller.java** 
@@ -188,8 +200,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("path_test/")
 public class ImartController {
-	
-	
 	
 	
 	
@@ -443,11 +453,14 @@ public class ImartWorkflowForm {
 </p>
 
 
+> **In this part you need to ensure the path are same.** 
+
+> **コンテンツ定義での作成されたパースを確認、同じようにパッケージを作成してください** 
+
 
 <p align="left">
   <img src="images/code12.png" alt="images" width="1000"/>
 </p>
-
 
 
 
@@ -644,10 +657,18 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 ```
 
 
+#### Create Views
+
+
+> **Because we are using Intra-Mart (Upgraded Spring Version), we need to create views folder** 
+
+> **Intra-Mart（最新Springバージョン）を使用するため、Viewsフォルダを作成しないといけない** 
+
+
+
 <p align="left">
   <img src="images/code13.png" alt="images" width="500"/>
 </p>
-
 
 <p align="left">
   <img src="images/code14.png" alt="images" width="500"/>
@@ -658,23 +679,20 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 </p>
 
 <p align="left">
-  <img src="images/code16.png" alt="images" width="500"/>
+  <img src="images/code16.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
   <img src="images/code17.png" alt="images" width="500"/>
 </p>
 
-
-
-
 <p align="left">
-  <img src="images/code18.png" alt="images" width="500"/>
+  <img src="images/code18.png" alt="images" width="800"/>
 </p>
 
 
 
-#### Source Code 7
+#### Source Code 8
 
 
 <p align="left">
@@ -682,6 +700,11 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 </p>
 
 > **applicationContext-path.java** 
+
+> **Base-package need to be same as created package** 
+
+> **ベースパッケージのところに前回の作成されたパッケージフォルダ名の確認が必要** 
+
 
 ```sh
 
@@ -712,7 +735,7 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 </p>
 
 
-#### Source Code 8
+#### Source Code 9
 
 
 <p align="left">
@@ -754,7 +777,7 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 
 
 
-#### Source Code 9
+#### Source Code 10
 
 
 <p align="left">
@@ -793,11 +816,11 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 
 ```
 
-
+<h3 align="center">🚩🚩Important Things (重要)🚩🚩</h3>
 
 > **Ensure Restart Server After Create Controller Endpoint** 
 
-> **Tenantアカウントを確認、（ロール、パブリックグループ）** 
+> **コントロールでの関数を作成した後、サーバーの再起動が必要** 
 
 
 
@@ -813,7 +836,13 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 
 
 
-<h2 align="center">⭐END OF Source Code Setup⭐</h2>
+<h2 align="center">⭐END of Source Code Setup⭐</h2>
+
+➡️
+[Database Setup データベース設定](../db_setup/database.md)
+
+⬅️
+[Back to README 戻る](../README.md)
 
 
 
@@ -821,7 +850,9 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 
 > **Error Controller Compiled Version** 
 
-> **Tenantアカウントを確認、（ロール、パブリックグループ）** 
+> **コントロールでのエラーが発生しました** 
+
+##### Error Compile
 
 <p align="left">
   <img src="images/ErrorCompile.png" alt="images" width="1000"/>
@@ -830,15 +861,11 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 
 > **Project > Properties > Java Compile** 
 
-> **Tenantアカウントを確認、（ロール、パブリックグループ）** 
-
+> **プロジェクト　⇒　プロパティ　⇒　Javaコンパイラー** 
 
 
 <p align="left">
   <img src="images/FixErrorComple.png" alt="images" width="1000"/>
 </p>
-
-
-
 
 
