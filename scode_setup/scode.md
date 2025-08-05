@@ -6,9 +6,11 @@
 
 <h2 align="left">⭐Source Code Setup⭐</h2>
 
+<p align="center">
+  <img src="images/logo.png" alt="images" width="800"/>
+</p>
 
-
-Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
+Please follow the steps below (以下の手順に従ってください).
 
 パッケージ作成　⇒　画面作成　
 

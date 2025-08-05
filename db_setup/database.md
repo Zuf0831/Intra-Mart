@@ -4,11 +4,13 @@
 [Back 戻る](../README.md)
 
 
-<h2 align="left">⭐Database Setup⭐</h2>
+<h2 align="left">⭐CRUD Setup⭐</h2>
 
+<p align="center">
+  <img src="images/logo.png" alt="images" width="800"/>
+</p>
 
-
-Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
+Please follow the steps below (以下の手順に従ってください).
 
 <h4 align="left">📖 Design (デザイン) </h4>
 Create Screen
@@ -34,7 +36,7 @@ Create Service MatterEnd ⇒ Update Database
 
 1. [Design](#design)
     - [Apply JSP Sample Code](#sample-code-1)
-    - [Diagram](#diagram)
+    - [ER Diagram](#er-diagram)
     - [Flow Chart](#flow-chart)
     
 2. [Apply Action Process](#apply-action-process)
@@ -46,10 +48,25 @@ Create Service MatterEnd ⇒ Update Database
     - [Apply Testing](#apply-testing)
 
 3. [Process Data](#process-data)
-    
-
+    - [Create Approve](#create-approve-screen)
+      - [Sample Button](#sample-code-button)
+      - [Sample Approve Controller](#sample-code-data)
+    - [Retrieve Data](#retrieve-data)
+      - [Import Module](#import-sample-1)
+      - [Sample Select Data Info Temp](#sample-code-data-2)
+      - [Sample Get Data Service](#sample-code-data-3)
+      - [Full Approve Controller](#sample-code-data-4)
 3. [Matter End Process](#matter-end)
-    
+    - [Import Module](#sample-code-data-5)
+    - [Sample MatterEndServiceImpl](#sample-code-data-6)
+    - [Sample Select Data Header](#sample-code-data-7)
+    - [Sample Move Data Info Temp to Data Info ](#sample-code-data-8)
+    - [Sample Update Header](#sample-code-data-9)
+    - [Sample Set Data Header](#sample-code-data-10)
+    - [Full MatterEndServiceImpl](#sample-code-data-11)
+4. [Case Testing](#testing)
+    - [Accepted承認](#accepted-case)
+    - [Rejected否認](#rejected-case)
     
 
 
@@ -248,11 +265,11 @@ Create Service MatterEnd ⇒ Update Database
 ```
 
 
-> **From the screen we have flow database like diagram below** 
+> **From the screen that we created, ERD shoud be like picture below** 
 
 > **画面作成した後、データベースのイメージが以下の図に表示される** 
 
-##### Diagram
+##### ER Diagram
 
 <p align="left">
   <img src="images/umlDiagram.png" alt="images" width="800"/>
@@ -711,9 +728,726 @@ public class ActionProcessServiceImpl implements ActionProcessService {
 
 ##### Process Data
 
+<p align="left">
+  <img src="images/process1.png" alt="images" width="1000"/>
+</p>
+
+> **We will login as 'user1' (Approve Node)**
+
+> **承認ノードは'user1'としてログインが必要**
+
+
+
+<p align="left">
+  <img src="images/process2.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="images/process3.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="images/process4.png" alt="images" width="500"/>
+</p>
+
+<p align="left">
+  <img src="images/process5.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/process6.png" alt="images" width="1000"/>
+</p>
+
+
+##### Create Approve Screen
+
+> **Create Approve.jsp file** 
+
+> **Approve.jsp ファイルを作成** 
+
+
+
+<p align="left">
+  <img src="images/approve1.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/approve2.png" alt="images" width="800"/>
+</p>
+
+> **Copy all source code from apply.jsp to approve.jsp**
+
+> **Apply.jspファイルから全部ソースコードをapprove.jspファイルに移動**
+
+> **Change the Button Function to Source Code below**
+
+> **ボタンの関数を以下のソースコードを変更してください**
+
+##### Sample Code Button
+
+```sh
+
+<!-- Button Default -->
+<div class="imui-operation-parts">
+	<input type="button" value='Process' id="openPage" name="openPage" class="imui-large-button" escapeXml="true" escapeJs="false" />
+</div>
+
+```
+
+<p align="left">
+  <img src="images/approve3.png" alt="images" width="800"/>
+</p>
+
+> **Inside input form, need to add "readonly" so we can't input to the form**
+
+> **入力フォームのところに "readonly" を記入することが必要**
+
+<p align="left">
+  <img src="images/approve4.png" alt="images" width="800"/>
+</p>
+
+> **Create Approve Controller** 
+
+> **承認コントローラの関数を作成** 
+
+##### Sample Code Data
+
+```sh
+
+	@RequestMapping(value = "approve")
+	public final String approve(final Model model, final ImartForm ApplyForm) throws AccessSecurityException, IOException {
+		try {
+			
+			model.addAttribute("ApplyForm", ApplyForm);
+		}catch(Exception e) {
+			System.out.println("Error Approve :" + e);
+		}
+		
+		return "wf/path_test/general/approve.jsp";
+	}
+
+
+```
+
+
+
+<p align="left">
+  <img src="images/approve5.png" alt="images" width="800"/>
+</p>
+
+> **Restart the server and login again as user1**
+
+> **承認ノードは'user1'としてログインが必要**
+
+
+<p align="left">
+  <img src="images/approve6.png" alt="images" width="800"/>
+</p>
+
+
+#### Retrieve Data
+
+> **Create Workflow Service**
+
+> **ワークフローサービスのファイルを作成**
+
+<p align="left">
+  <img src="images/getdata.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/getdata1.png" alt="images" width="500"/>
+</p>
+
+
+> **Import Module** 
+
+> **モジュールをインポートする** 
+
+##### Import Sample 1 
+
+```sh
+
+import java.io.IOException;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+
+import jp.co.intra_mart.foundation.exception.BizApiException;
+import jp.co.intra_mart.foundation.master.common.search.AppCmnSearchCondition;
+import jp.co.intra_mart.foundation.master.company.CompanyManager;
+import jp.co.intra_mart.foundation.master.company.model.Department;
+import jp.co.intra_mart.foundation.master.company.model.DepartmentBizKey;
+import jp.co.intra_mart.foundation.master.company.model.DepartmentListNode;
+import jp.co.intra_mart.foundation.master.item.model.ItemListNode;
+import jp.co.intra_mart.foundation.master.item_category.ItemCategoryManager;
+import jp.co.intra_mart.foundation.master.item_category.model.ItemCategory;
+import jp.co.intra_mart.foundation.master.item_category.model.ItemCategoryBizKey;
+import jp.co.intra_mart.foundation.master.item_category.model.ItemCategorySet;
+import jp.co.intra_mart.foundation.master.user.UserManager;
+import jp.co.intra_mart.foundation.master.user.model.User;
+import jp.co.intra_mart.foundation.master.user.model.UserBizKey;
+import jp.co.intra_mart.foundation.master.user.model.UserListNode;
+import jp.co.intra_mart.foundation.service.client.file.PublicStorage;
+import jp.co.intra_mart.foundation.service.client.file.SessionScopeStorage;
+import jp.co.intra_mart.foundation.context.Contexts;
+import jp.co.intra_mart.foundation.context.model.AccountContext;
+import jp.co.intra_mart.foundation.user_context.model.Company;
+import jp.co.intra_mart.foundation.user_context.model.UserContext;
+
+
+```
+
+<p align="left">
+  <img src="images/getdata2.png" alt="images" width="800"/>
+</p>
+
+> **Import All Package** 
+
+> **作成されたパッケージをインポートする** 
+
+<p align="left">
+  <img src="images/getdata3.png" alt="images" width="800"/>
+</p>
+
+> **Define Repository that needed to get data** 
+
+> **データベースからデータを取得するため、Repository定義が必要** 
+
+<p align="left">
+  <img src="images/getdata4.png" alt="images" width="800"/>
+</p>
+
+> **Sample Code Select Data Info_Temp Repository** 
+
+##### Sample Code Data 2
+
+```sh
+
+	private String selectDataAll = "SELECT * FROM wf_header_info_temp";
+	private String selectDataBy_MatterId = "SELECT * FROM wf_header_info_temp WHERE system_matter_id = ?";
+	
+	public Collection<HeaderInfoTempModel> selectDataInfoTempHeader(String select_value, String select_where) throws Exception {
+		try {
+			SQLManager sqlManager = new SQLManager();
+			Collection<Object> parameters = new ArrayList();
+			
+			String select_query = "";
+			
+			if (select_where.equals("system_matter_id")) {
+				select_query = this.selectDataBy_MatterId;
+				parameters.add(select_value);
+				
+			}else {
+				select_query = this.selectDataAll;
+			}
+					
+			Collection<HeaderInfoTempModel> result = sqlManager.select(HeaderInfoTempModel.class, select_query, parameters);
+			return result;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			throw new Exception("Error in selectDataInfoTempHeader", e);
+		}
+	}
+	
+
+
+```
+
+<p align="left">
+  <img src="images/getdata5.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/getdata6.png" alt="images" width="1000"/>
+</p>
+
+<p align="left">
+  <img src="images/getdata7.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/getdata8.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/getdata9.png" alt="images" width="800"/>
+</p>
+
+
+> **Sample Code Get Data Info Temp** 
+
+##### Sample Code Data 3
+
+```sh
+
+	public ImartForm getInfoTemp(String select_value,String select_where) throws Exception {
+		
+		
+		HeaderInfoTempRepository InfoTempHeaderDB = new HeaderInfoTempRepository();
+        
+		Collection<HeaderInfoTempModel> rows_headerInfo = InfoTempHeaderDB.selectDataInfoTempHeader(select_value, select_where);
+		
+        return setInfoTempForm(rows_headerInfo);
+        }
+
+	private ImartForm setInfoTempForm(Collection<HeaderInfoTempModel> rows_headerInfo) {
+		ImartForm result = new ImartForm();
+		
+		
+		HeaderInfoTempModel InfoTempHeaderRows = rows_headerInfo.iterator().next();
+		
+		//Execute set and get data
+		try {result.setF_system_matter_id(InfoTempHeaderRows.getSystem_matter_id()); } catch (Exception e) {}
+		try {result.setF_user_data_id(InfoTempHeaderRows.getUser_data_id()); } catch (Exception e) {}
+		
+		try {result.setF_name(InfoTempHeaderRows.getName()); } catch (Exception e) {}
+		try {result.setF_age(InfoTempHeaderRows.getAge()); } catch (Exception e) {}
+		try {result.setF_note(InfoTempHeaderRows.getNote()); } catch (Exception e) {}
+		
+		
+		return result;
+	}
+	
+
+
+```
+
+> **Import All Package** 
+
+> **作成されたパッケージをインポートする** 
+
+
+<p align="left">
+  <img src="images/getdata10.png" alt="images" width="800"/>
+</p>
+
+
+> **Sample Code Approve Controller** 
+
+##### Sample Code Data 4
+
+```sh
+
+	@RequestMapping(value = "approve")
+	public final String approve(final Model model, final ImartForm ApplyForm) throws AccessSecurityException, IOException {
+		try {
+			WorkflowService Service = new WorkflowService();
+			ImartForm FormClassRows = new ImartForm();
+			FormClassRows = Service.getInfoTemp(ApplyForm.getImwSystemMatterId(), "system_matter_id");
+			
+			
+			model.addAttribute("FormClassRows",FormClassRows);
+			model.addAttribute("ApplyForm", ApplyForm);
+		}catch(Exception e) {
+			System.out.println("Error Approve :" + e);
+		}
+		
+		return "wf/path_test/general/approve.jsp";
+	}
+
+
+```
+
+<p align="left">
+  <img src="images/getdata11.png" alt="images" width="1000"/>
+</p>
+
+> **Add value to the input form in Approve.jsp** 
+
+> **Approve.jspでの入力フォームの中にバリューコードを追加することが必要** 
+
+<p align="left">
+  <img src="images/getdata12.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/getdata13.png" alt="images" width="800"/>
+</p>
+
+
+
+⬅️
+[Back to README 戻る](../README.md)
+
+
+
 <h3 align="center">🚩🚩MatterEndProcess (案件終了)🚩🚩</h3>
 
 ##### Matter End
+
+<p align="left">
+  <img src="images/matter1.png" alt="images" width="800"/>
+</p>
+
+> **Approve(承認) 、Reject（否認）** 
+
+<p align="left">
+  <img src="images/matter2.png" alt="images" width="800"/>
+</p>
+
+
+> **Import Module** 
+
+> **モジュールをインポートする** 
+
+##### Sample Code Data 5
+
+```sh
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import jp.co.intra_mart.foundation.workflow.exception.WorkflowExternalException;
+import jp.co.intra_mart.foundation.workflow.plugin.process.matter_end.MatterEndProcessParameter;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+
+```
+
+
+<p align="left">
+  <img src="images/matter3.png" alt="images" width="1000"/>
+</p>
+
+
+> **Sample Code MatterEndProcessServiceImpl.Java** 
+
+
+##### Sample Code Data 6
+
+```sh
+
+@Service
+@Transactional(propagation = Propagation.MANDATORY)
+public class MatterEndProcessServiceImpl  implements MatterEndProcessService{
+	@Override
+    public boolean execute(final MatterEndProcessParameter parameter) throws Exception {
+		
+		
+		
+		
+		return true;
+	}
+	
+	
+
+}
+
+```
+
+
+<p align="left">
+  <img src="images/matter4.png" alt="images" width="1000"/>
+</p>
+
+
+> **Sample Code HeaderRepository.Java** 
+
+##### Sample Code Data 7
+
+```sh
+
+  private String selectDataAll = "SELECT * FROM wf_header";
+	private String selectDataBy_MatterId = "SELECT * FROM wf_header WHERE system_matter_id = ?";
+	
+	public Collection<HeaderModel> selectDataHeader(String select_value, String select_where) throws Exception {
+		try {
+			SQLManager sqlManager = new SQLManager();
+			Collection<Object> parameters = new ArrayList();
+			
+			String select_query = "";
+			
+			if (select_where.equals("system_matter_id")) {
+				select_query = this.selectDataBy_MatterId;
+				parameters.add(select_value);
+				
+			}else {
+				select_query = this.selectDataAll;
+			}
+					
+			Collection<HeaderModel> result = sqlManager.select(HeaderModel.class, select_query, parameters);
+			return result;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			throw new Exception("Error in selectDataHeader", e);
+		}
+	}
+
+```
+
+<p align="left">
+  <img src="images/matter5.png" alt="images" width="1000"/>
+</p>
+
+
+<p align="left">
+  <img src="images/matter6.png" alt="images" width="1000"/>
+</p>
+
+
+<p align="left">
+  <img src="images/matter7.png" alt="images" width="1000"/>
+</p>
+
+
+<p align="left">
+  <img src="images/matter8.png" alt="images" width="1000"/>
+</p>
+
+
+<p align="left">
+  <img src="images/matter9.png" alt="images" width="1000"/>
+</p>
+
+
+<p align="left">
+  <img src="images/matter10.png" alt="images" width="1000"/>
+</p>
+
+> **Sample Code Move Data Info Temp to Data Info** 
+##### Sample Code Data 8
+
+```sh
+
+public HeaderInfoModel Move_DataTemp_to_InfoHeader(Collection<HeaderInfoTempModel> rows_temp_header) {
+		HeaderInfoTempModel TempHeaderRows = rows_temp_header.iterator().next();
+		HeaderInfoModel result = new HeaderInfoModel();
+		
+		//Create set and Get Data
+		result.setSystem_matter_id(TempHeaderRows.getSystem_matter_id());
+		result.setUser_data_id(TempHeaderRows.getUser_data_id());
+		
+		result.setName(TempHeaderRows.getName());
+		result.setAge(TempHeaderRows.getAge());
+		result.setNote(TempHeaderRows.getNote());
+		
+		
+		return result;
+	}
+
+```
+
+
+
+<p align="left">
+  <img src="images/matter11.png" alt="images" width="1000"/>
+</p>
+
+
+<p align="left">
+  <img src="images/matter12.png" alt="images" width="1000"/>
+</p>
+
+> **Sample Code Update** 
+##### Sample Code Data 9
+
+```sh
+
+public void updateDataHeader(HeaderModel varDataHeaderData)throws Exception{
+		try {
+			SQLManager sqlManager = new SQLManager();
+			
+			new ColumnValues();
+			SearchCondition searchCondition = new SearchCondition();
+			searchCondition.addCondition("system_matter_id", varDataHeaderData.getSystem_matter_id());
+			
+			ColumnValues columnVal = this.setDataHeaderValue(varDataHeaderData, "update");
+			sqlManager.update(tableName, columnVal, searchCondition);
+			
+		}catch (AccessSecurityException | IllegalArgumentException | NamingException | BizApiException | SQLException var6) {
+			var6.printStackTrace();
+			throw new Exception("DB Error in UpdateHeader");
+			
+			
+		}
+		
+	}
+
+```
+
+<p align="left">
+  <img src="images/matter13.png" alt="images" width="1000"/>
+</p>
+
+> **Sample Code Set Data Header** 
+##### Sample Code Data 10
+
+```sh
+
+private ColumnValues setDataHeaderValue(HeaderModel varDataHeaderData, String Condition) {
+		ColumnValues result = new ColumnValues();
+		
+		LocalDateTime now = LocalDateTime.now();
+		Timestamp timestamp = Timestamp.valueOf(now);
+		
+		
+		if(Condition.equals("create")) {
+			result.add("system_matter_id", varDataHeaderData.getSystem_matter_id());
+			result.add("user_data_id", varDataHeaderData.getUser_data_id());
+			
+			
+			result.add("status", varDataHeaderData.getStatus());
+			
+			result.add("created_at", timestamp);
+			result.add("updated_at", timestamp);
+		}else if (Condition.equals("update")) {
+			result.add("system_matter_id", varDataHeaderData.getSystem_matter_id());
+			result.add("user_data_id", varDataHeaderData.getUser_data_id());
+			
+			result.add("status", varDataHeaderData.getStatus());
+
+
+			result.add("updated_at", timestamp);
+
+		}
+		
+		return result;
+	}
+
+```
+
+<p align="left">
+  <img src="images/matter14.png" alt="images" width="700"/>
+</p>
+
+<p align="left">
+  <img src="images/matter15.png" alt="images" width="500"/>
+</p>
+
+> **Sample Code Matter End** 
+##### Sample Code Data 11
+
+```sh
+
+
+@Service
+@Transactional(propagation = Propagation.MANDATORY)
+public class MatterEndProcessServiceImpl  implements MatterEndProcessService{
+	@Override
+    public boolean execute(final MatterEndProcessParameter parameter) throws Exception {
+	
+		//Repository
+		HeaderRepository HeaderDB = new HeaderRepository();
+		HeaderInfoRepository HeaderInfoDB = new HeaderInfoRepository();
+		HeaderInfoTempRepository HeaderInfoTempDB = new HeaderInfoTempRepository();
+		
+		
+		//Model
+		HeaderModel rows_header = HeaderDB.selectDataHeader(parameter.getSystemMatterId(),"system_matter_id").iterator().next();
+		
+		Collection<HeaderInfoTempModel> rows_temp_header = HeaderInfoTempDB.selectDataInfoTempHeader(parameter.getSystemMatterId(), "system_matter_id");
+		
+		HeaderInfoModel rows_info_header = new HeaderInfoModel();
+		
+		WorkflowService Service = new WorkflowService();
+		rows_info_header = Service.Move_DataTemp_to_InfoHeader(rows_temp_header);
+		
+		
+		//Condition
+		if(parameter.getLastResultStatus() == "mattercomplete") {
+			//Update Header DB
+			rows_header.setStatus("2");
+			HeaderDB.updateDataHeader(rows_header);
+			
+			//Create Data to Header Info DB
+			HeaderInfoDB.insertDataInfoHeader(rows_info_header);
+
+			
+		}else if(parameter.getLastResultStatus() == "deny") {
+			//Update Header DB
+			rows_header.setStatus("99");
+			HeaderDB.updateDataHeader(rows_header);
+			
+		}
+		
+		
+		return true;
+	}
+	
+}
+
+```
+
+⬅️
+[Back to README 戻る](../README.md)
+
+
+<h3 align="center">🚩🚩Case Testing (テスト)🚩🚩</h3>
+
+### Testing
+
+> **Before testing, make sure to restart the server** 
+
+> **テストをする前に、サーバー再起動が必要** 
+
+###### Accepted Case
+
+<p align="left">
+  <img src="images/case1.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/case2.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/case3.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/case4.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/case5.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/case6.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/case7.png" alt="images" width="800"/>
+</p>
+
+
+###### Rejected Case
+
+
+<p align="left">
+  <img src="images/fail1.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/fail2.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/fail3.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/fail4.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/fail5.png" alt="images" width="800"/>
+</p>
+
 
 
 ⬅️
