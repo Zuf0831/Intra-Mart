@@ -56,6 +56,7 @@ Create Service MatterEnd ⇒ Update Database
       - [Sample Select Data Info Temp](#sample-code-data-2)
       - [Sample Get Data Service](#sample-code-data-3)
       - [Full Approve Controller](#sample-code-data-4)
+    - [Create Detail Screen](#detail-data)
 3. [Matter End Process](#matter-end)
     - [Import Module](#sample-code-data-5)
     - [Sample MatterEndServiceImpl](#sample-code-data-6)
@@ -1073,6 +1074,45 @@ import jp.co.intra_mart.foundation.user_context.model.UserContext;
 <p align="left">
   <img src="images/getdata13.png" alt="images" width="800"/>
 </p>
+
+<h4 align="left">Create Detail (案件終了)</h4>
+
+##### Detail Data
+
+<p align="left">
+  <img src="images/detail1.png" alt="images" width="800"/>
+</p>
+
+> **Copy all source code from approve.jsp to detail.jsp**
+
+> **approve.jspファイルから全部ソースコードをdetail.jspファイルに移動**
+
+> **Delete the Button Function**
+
+> **ボタンの関数を削除してください**
+
+<p align="left">
+  <img src="images/detail2.png" alt="images" width="800"/>
+</p>
+
+> **Copy all source code from approve contoller, change to detail**
+
+> **approveコントローラの関数全部ソースコードをコピペして、approveの部分はdetailとして変更してください**
+
+
+<p align="left">
+  <img src="images/detail3.png" alt="images" width="800"/>
+</p>
+
+
+<p align="left">
+  <img src="images/detail4.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="images/detail5.png" alt="images" width="800"/>
+</p>
+
 
 
 

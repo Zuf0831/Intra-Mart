@@ -24,8 +24,8 @@ IT投資の効率化と業務プロセスの最適化・標準化を実現する
 
 - For more details about Intra-Mart, please refer to the official Intra-Mart website.
 - この情報はIntra-Martに関する作成されたので、不明点があったら、Intra-Martの正式サイトをご覧ください。
-##### リンク : `https://www.intra-mart.jp/`.
-
+##### リンク : [Intra Mart](https://www.intra-mart.jp/).
+`https://www.intra-mart.jp/`.
 
 <h1 align="center">📖 Requirements (要件項目)📖</h1>
 
@@ -56,8 +56,9 @@ Please follow the steps below (以下の手順に従ってください).
 
 1. [Table](feature/table.md)
 2. [Attachment](feature/attachment.md)
-3. [Jobnet](feature/jobnet.md)
-4. [Mail](feature/mail.md)
+3. [Re-Apply](feature/jobnet.md)
+4. [Jobnet](feature/jobnet.md)
+5. [Mail](feature/mail.md)
 
 
 <h1 align="center">⏭️ Details (目次) ⏭️</h1>
@@ -673,6 +674,9 @@ set TMP=C:\TempPG
 <p align="left">
   <img src="media/Warfile/setup9.png" alt="images" width="800"/>
 </p>
+
+➡️
+[Tenant Setup](Tenant_Setup/tenant.md)
 
 
 

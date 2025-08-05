@@ -841,7 +841,7 @@ public class MatterEndProcess extends MatterEndProcessEventListener {
 <h2 align="center">⭐END of Source Code Setup⭐</h2>
 
 ➡️
-[Database Setup データベース設定](../db_setup/database.md)
+[CRUD Setup CRUD設定](../db_setup/database.md)
 
 ⬅️
 [Back to README 戻る](../README.md)
