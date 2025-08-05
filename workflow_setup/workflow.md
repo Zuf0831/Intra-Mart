@@ -7,7 +7,7 @@
 <h2 align="left">⭐Worfkflow Setup⭐</h2>
 
 
-Need to Follow Step Bellow (以下の流れ手順にご覧ください。)
+Please follow the steps below (以下の手順に従ってください).
 
 ユーザー登録　⇒　コンテンツ定義　⇒　ルート定義　⇒　フロー定義
 

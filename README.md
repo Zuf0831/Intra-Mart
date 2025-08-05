@@ -44,12 +44,21 @@ IT投資の効率化と業務プロセスの最適化・標準化を実現する
 
 <h1 align="center">📖 Documentation (ドキュメント)📖</h1>
 
-Need to Follow Step Bellow (以下の流れ手順にご覧ください)
+Please follow the steps below (以下の手順に従ってください).
 
 1. [Program Install](#install-section)
 2. [Tenant Setup](Tenant_Setup/tenant.md)
 3. [Workflow Setup](workflow_setup/workflow.md)
 4. [Source Code Setup](scode_setup/scode.md)
+5. [CRUD Setup](db_setup/database.md)
+
+<h4 align="left">📖 Feature (機能)📖</h4>
+
+1. [Table](feature/table.md)
+2. [Attachment](feature/attachment.md)
+3. [Jobnet](feature/jobnet.md)
+4. [Mail](feature/mail.md)
+
 
 <h1 align="center">⏭️ Details (目次) ⏭️</h1>
 
