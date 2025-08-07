@@ -57,8 +57,8 @@ Please follow the steps below (以下の手順に従ってください).
 1. [Table](feature/table.md)
 2. [Validation](feature/validation.md)
 3. [Attachment](feature/attachment.md)
-4. [Re-Apply](feature/reapply.md)
-5. [Jobnet](feature/jobnet.md)
+4. [Jobnet](feature/jobnet.md)
+5. [Re-Apply](feature/reapply.md)
 6. [Mail](feature/mail.md)
 7. [PDF](feature/pdf.md)
 

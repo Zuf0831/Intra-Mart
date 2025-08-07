@@ -62,6 +62,7 @@ Create Service MatterEnd ⇒ Update Database
     - [Rejected否認](#rejected-case)
 
 5. [Source Code Reference](#sample-source-code)
+	- [Error List String](#error-list-string)
     - [Select2.min.css](#select2-css)
     - [Select2.min.js](#select2-js)
 
@@ -551,6 +552,27 @@ $(".imuiCalendar").imuiCalendar({
 <p align="left">
   <img src="images/table/logoscode.png" alt="images" width="1000"/>
 </p>
+
+
+##### Error List String
+
+
+<p align="left">
+  <img src="images/table/errorList.png" alt="images" width="1000"/>
+</p>
+
+
+<p align="left">
+  <img src="images/table/fixError.png" alt="images" width="1000"/>
+</p>
+
+
+<p align="left">
+  <img src="images/table/fixError2.png" alt="images" width="1000"/>
+</p>
+
+
+
 
 ##### Select2 css
 
