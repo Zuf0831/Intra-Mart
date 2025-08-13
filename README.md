@@ -65,6 +65,8 @@ Please follow the steps below (以下の手順に従ってください).
 
 <h1 align="center">⏭️ Details (目次) ⏭️</h1>
 
+##### Detail
+
 1. [Java Install](#java-8)
 2. [Notepad++ ・ VSCode Download](#notepad-vscode)
 3. [Resin Install](#resin)
@@ -249,6 +251,8 @@ Please follow the steps below (以下の手順に従ってください).
   <img src="media/Resin/taskmanager.png" alt="images" width="700"/>
 </p>
 
+️️⬅️
+[Back to Detail](#detail)
 
 ⭐⭐⭐⭐⭐⭐
 ## PostgreSQL
@@ -425,7 +429,8 @@ set TMP=C:\TempPG
   <img src="media/PostgreSQL/databaseCreate.png" alt="images" width="500"/>
 </p>
 
-
+️️⬅️
+[Back to Detail](#detail)
 
 ⭐⭐⭐⭐⭐⭐
 ## Juggling
@@ -454,8 +459,43 @@ set TMP=C:\TempPG
 > **キーボードで(CTRL + F)を押し、Jugglingを入力** 
 
 <p align="left">
-  <img src="media/Juggling/filter.png" alt="images" width="500"/>
+  <img src="media/Juggling/filter.png" alt="images" width="800"/>
 </p>
+
+
+<p align="left">
+  <img src="media/Juggling/extract.png" alt="images" width="800"/>
+</p>
+
+
+<p align="left">
+  <img src="media/Juggling/newProject.png" alt="images" width="800"/>
+</p>
+
+
+<p align="left">
+  <img src="media/Juggling/IAPSelection.png" alt="images" width="800"/>
+</p>
+
+
+<p align="left">
+  <img src="media/Juggling/FormaDesigner.png" alt="images" width="800"/>
+</p>
+
+
+<p align="left">
+  <img src="media/Juggling/Development.png" alt="images" width="800"/>
+</p>
+
+
+<p align="left">
+  <img src="media/Juggling/Terasoluna.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/Juggling/Done.png" alt="images" width="800"/>
+</p>
+
 
 
 
@@ -554,7 +594,8 @@ set TMP=C:\TempPG
   <img src="media/Juggling/setup18.png" alt="images" width="500"/>
 </p>
 
-
+️️⬅️
+[Back to Detail](#detail)
 
 ⭐⭐⭐⭐⭐⭐
 ### Execute Warfile
@@ -661,6 +702,9 @@ set TMP=C:\TempPG
   <img src="media/Warfile/ErrorBean223.png" alt="images" width="400"/>
 </p>
 
+️️⬅️
+[Back to Detail](#detail)
+
 🚩🚩🚩
 #### Checkpoint Deploy
 🚩🚩🚩
@@ -680,7 +724,8 @@ set TMP=C:\TempPG
 ➡️
 [Tenant Setup](Tenant_Setup/tenant.md)
 
-
+️️⬅️
+[Back to Detail](#detail)
 
 ⭐⭐⭐⭐⭐⭐
 ## EBuilder
@@ -752,7 +797,7 @@ set TMP=C:\TempPG
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/setup8.png" alt="images" width="500"/>
+  <img src="media/EBuilder/setup8.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
@@ -778,7 +823,7 @@ set TMP=C:\TempPG
 > **General ⇒　Editor ⇒　Text/Editor (Show Whitespace Charaters)** 
 
 <p align="left">
-  <img src="media/EBuilder/setup14.png" alt="images" width="500"/>
+  <img src="media/EBuilder/setup14.png" alt="images" width="800"/>
 </p>
 
 > **General ⇒　Show Heap Status** 
@@ -836,6 +881,36 @@ set TMP=C:\TempPG
 #### Create Server Ebuilder
 🚩🚩🚩🚩🚩🚩
 
+
+<p align="left">
+  <img src="media/EBuilder/server1.png" alt="images" width="800"/>
+</p>
+
+
+<p align="left">
+  <img src="media/EBuilder/server2.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/server3.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/server4.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/server5.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/server6.png" alt="images" width="800"/>
+</p>
+
+<p align="left">
+  <img src="media/EBuilder/server7.png" alt="images" width="1000"/>
+</p>
+
 <p align="left">
   <img src="media/EBuilder/move1.png" alt="images" width="800"/>
 </p>
@@ -856,7 +931,8 @@ set TMP=C:\TempPG
   <img src="media/EBuilder/move5.png" alt="images" width="800"/>
 </p>
 
-
+️️⬅️
+[Back to Detail](#detail)
 
 ⭐⭐⭐⭐⭐⭐
 ### SMTP 4 Dev
@@ -875,3 +951,6 @@ set TMP=C:\TempPG
 <p align="left">
   <img src="media/smtp/try2.png" alt="images" width="800"/>
 </p>
+
+️️⬅️
+[Back to Detail](#detail)
