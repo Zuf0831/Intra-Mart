@@ -4,7 +4,7 @@
 [Back 戻る](../README.md)
 
 
-<h2 align="left">⭐Re-Apply Setup⭐</h2>
+<h2 align="left">⭐Re-Apply （差戻し）Setup⭐</h2>
 
 
 
@@ -55,7 +55,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **Define the Repository** 
 
-> **移動** 
+> **Repository定義（追加）** 
 
 
 <p align="left">
@@ -64,7 +64,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **Execute Data** 
 
-> **移動** 
+> **データ実行** 
 
 <p align="left">
   <img src="images/reapply/flow4.png" alt="images" width="800"/>
@@ -74,7 +74,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **Update Data Repository** 
 
-> **移動** 
+> **更新データ関数を追加** 
 
 
 <p align="left">
@@ -90,7 +90,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **Delete Data Repository** 
 
-> **移動** 
+> **データ削除関数を追加** 
 
 
 <p align="left">
@@ -105,7 +105,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **You can use created function to get Entity from the Apply Section** 
 
-> **移動** 
+> **Apply関数から既存ソースコード使用できる** 
 
 <p align="left">
   <img src="images/reapply/flow5.png" alt="images" width="1000"/>
@@ -128,7 +128,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **Add Value Command to the Input Field** 
 
-> **コピペ以下のコマンド** 
+> **Value(コマンド)追加が必要** 
 
 <p align="left">
   <img src="images/reapply/screen1.png" alt="images" width="1000"/>
@@ -139,7 +139,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **For data in detail table (Rows), You can copy source code from Approve.jsp** 
 
-> **コピペ以下のコマンド** 
+> **詳細なテーブル部分はApprove.JSPからコピペしてもOK** 
 
 
 <p align="left">
@@ -149,7 +149,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **Remove "readonly" part from the source code, so you can edit the input data** 
 
-> **コピペ以下のコマンド** 
+> **コピペした後、"readonly"の部分を削除が必要** 
 
 <p align="left">
   <img src="images/reapply/approve2.png" alt="images" width="1000"/>
@@ -175,7 +175,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **File Attached Source Code** 
 
-> **コピペ以下のコマンド** 
+> **添付ファイルソースコード** 
 
 ```sh
 <imart:decision case="3" value="${f:h(ApplyForm.imwPageType)}">
@@ -205,6 +205,8 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 #### Delete Data Attachment
 
+> **添付ファイル削除機能**
+
 <p align="left">
   <img src="images/reapply/screen5.png" alt="images" width="1000"/>
 </p>
@@ -217,7 +219,7 @@ Action Process Service Impl編集 ⇒ Repository編集 ⇒　Controller 編集 �
 
 > **Source Code JavaScript** 
 
-> **コピペ以下のコマンド** 
+> **JavaScriptソースコード** 
 
 ```sh
 //Delete File Attachment
@@ -227,6 +229,9 @@ var fileName = $(this).attr("name");
 $("." + fileName).remove();
 });
 ```
+
+⬅️
+[Back 戻る](../README.md)
 
 <h3 align="center">🚩🚩Testing Re-Apply Function(テスト)🚩🚩</h3>
 

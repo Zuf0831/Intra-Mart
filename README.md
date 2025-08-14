@@ -60,7 +60,8 @@ Please follow the steps below (以下の手順に従ってください).
 4. [Jobnet](feature/jobnet.md)
 5. [Re-Apply](feature/reapply.md)
 6. [Mail](feature/mail.md)
-7. [PDF](feature/pdf.md)
+7. [Ajax](feature/ajax.md)
+8. [PDF](feature/pdf.md)
 
 
 <h1 align="center">⏭️ Details (目次) ⏭️</h1>
