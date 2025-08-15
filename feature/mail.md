@@ -32,7 +32,7 @@
 3. [Test Mail Function](#testing-area)
 
 
-<h3 align="center">🚩Modify Database（再申請機能作成）🚩</h3>
+<h3 align="center">🚩Modify Database（データベース編集）🚩</h3>
 
 ##### Edit Action Process Service Impl
 
@@ -66,7 +66,7 @@
 
 
 
-<h3 align="center">🚩Modify Jobnet Source Code（再申請機能作成）🚩</h3>
+<h3 align="center">🚩Modify Jobnet Source Code（ジョブネットソースコード編集）🚩</h3>
 
 #### Modify Source Code
 
@@ -159,7 +159,7 @@ public void send_email(String matterId, String mail, ImartForm FormClassRows) th
 [Back 戻る](../README.md)
 
 
-<h3 align="center">🚩Testing Mail Function（再申請機能作成）🚩</h3>
+<h3 align="center">🚩Testing Mail Function（メール機能テスト）🚩</h3>
 
 #### Testing Area
 
