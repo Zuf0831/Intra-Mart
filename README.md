@@ -846,35 +846,35 @@ set TMP=C:\TempPG
 🚩🚩🚩🚩🚩🚩
 
 <p align="left">
-  <img src="media/EBuilder/project1.png" alt="images" width="500"/>
+  <img src="media/EBuilder/project1.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/project2.png" alt="images" width="500"/>
+  <img src="media/EBuilder/project2.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/project3.png" alt="images" width="500"/>
+  <img src="media/EBuilder/project3.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/project4.png" alt="images" width="500"/>
+  <img src="media/EBuilder/project4.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/project5.png" alt="images" width="500"/>
+  <img src="media/EBuilder/project5.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/project6.png" alt="images" width="500"/>
+  <img src="media/EBuilder/project6.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/project7.png" alt="images" width="500"/>
+  <img src="media/EBuilder/project7.png" alt="images" width="800"/>
 </p>
 
 <p align="left">
-  <img src="media/EBuilder/project8.png" alt="images" width="500"/>
+  <img src="media/EBuilder/project8.png" alt="images" width="800"/>
 </p>
 
 
@@ -919,6 +919,8 @@ set TMP=C:\TempPG
 <p align="left">
   <img src="media/EBuilder/move2.png" alt="images" width="800"/>
 </p>
+
+> **Delete the line of source code that have "All-UNNAMED" (ソースコードの中に"ALL-UNNAMED"の部分があったら、その行を削除してください)** 
 
 <p align="left">
   <img src="media/EBuilder/move3.png" alt="images" width="800"/>
