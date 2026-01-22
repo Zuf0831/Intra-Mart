@@ -46,7 +46,7 @@ If a custom mail is not necessary, you can skip the following steps after comple
     - [Standard + Extended Mail Function](#extend-mail-function)
     - [Mime Mail Function](#mime-mail-function)
 
-<h3 align="center">🚩Setup Notification（データベース編集）🚩</h3>
+<h3 align="center">🚩Setup Notification（メール通知設定）🚩</h3>
 
 #### Setup Notification
 
@@ -265,7 +265,7 @@ public void send_email(String matterId, String mail, ImartForm FormClassRows) th
 </p>
 
 
-<h3 align="center">🚩Sample Source Code（メール機能テスト）🚩</h3>
+<h3 align="center">🚩Sample Source Code（メール機能の参考ソースコード）🚩</h3>
 
 ##### Sample Source Code
 
